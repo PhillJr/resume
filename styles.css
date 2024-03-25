@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(7, 65, 127);
+}
+h3{
+    color: hsl(57, 93%, 47%);
+    /* color: white; */
+}
+h2{
+    color: gold;
+    filter: drop-shadow(15px 11px 1px #1a1a0a);
+}
+h1{
+    text-align: center;
+    text-shadow: rgb(225, 184, 20) 1px  0 5px;
+    /* text-shadow: rgb(255, 255, 255) 1px  0 10px; */
+
+}
+p{
+    color: white;
+}
+
+li{
+    color: white;
+}
+th{
+    color: white;
+}
+tr{
+    color: white;
+}
+footer{
+    color: white;
+}
