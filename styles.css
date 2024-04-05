@@ -1,33 +1,74 @@
-body {
-    background-color: rgb(7, 65, 127);
+/* Helps centers the content  */
+* {
+    box-sizing: border-box;
 }
-h3{
-    color: hsl(57, 93%, 47%);
+
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 2rem;
+    padding: 4rem;
+    background-color: rgb(7, 65, 127);
+    border: 2px solid gold;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    text-shadow: rgb(225, 184, 20) 1px 0 5px;
+}
+
+h2 {
+    color: gold;
+    filter: drop-shadow(10px 11px 1px #1a1a0a);
+}
+
+
+h3 {
+    color:  gold;
+    filter: drop-shadow(10px 11px 1px #1a1a0a);
     /* color: white; */
 }
-h2{
-    color: gold;
-    filter: drop-shadow(15px 11px 1px #1a1a0a);
+h4 {
+    color:  gold;
+    filter: drop-shadow(10px 11px 1px #1a1a0a);
+    /* color: white; */
 }
-h1{
-    text-align: center;
-    text-shadow: rgb(225, 184, 20) 1px  0 5px;
-    /* text-shadow: rgb(255, 255, 255) 1px  0 10px; */
 
-}
-p{
+p, li, th, tr, footer {
     color: white;
 }
 
-li{
-    color: white;
+
+h1, h2, h3
+{
+  padding-bottom: 1rem;
 }
-th{
-    color: white;
+
+p, li, table, form
+{
+  font-size: 0.8rem;
 }
-tr{
-    color: white;
+
+a
+{
+  text-decoration: none; /* Removing default underline from links */
+  color: #55AACC; /* A slightly lighter shade for links for better distinction */
 }
-footer{
-    color: white;
+
+.image img 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 2em; */
+    border-radius: 20%;
+    width: 10rem;
+}
+form input:hover,
+form textarea:hover
+{
+  outline: none;
+  background-color: rgba(47, 18, 209, 0.455);
 }
