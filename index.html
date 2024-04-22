@@ -14,9 +14,9 @@
   <!-- Start the sections divdie into 3 parts... header, main, footer. 
   Section off each point  -->
   <header>
-  <div class="image">
-    <img src="./Images/Phillip.PNG" width="180" alt="Phillip's Protrait">
-   </div>
+    <div class="image-container">
+      <img class="border-dotted" src="./Images/Phillip.PNG" width="120" alt="Phillip's Protrait">
+    </div>
     <h1>Phillip Varveris</h1>
     <hr>
     <p> Email: <a href="Phillipvarveris@gmail.com"> Phillipvarveris@gmail.com</a> </p>
@@ -45,6 +45,8 @@
     <!--Skills Added from Resume-->
     <!--Formatted Software tools into a table-->
     <h3>Software/Tools</h3>
+    <section class="software">
+    <div class="container">
     <table>
       <thead>
         <tr>
@@ -66,7 +68,7 @@
         </tr>
         <tr>
           <td>AutoCAD</td>
-          <td>Software focued on architecture and engineering based on 2D and 3D design modeling</td>
+          <td>Software for architecture and engineering based on 2D and 3D design modeling</td>
           <td>Intermediate</td>
         </tr>
         <tr>
@@ -93,16 +95,18 @@
       </tbody>
     </table>
     </div>
+  </section>
+
+
     <div>
       <!--Order From most to least familiar using ordered list to show the importance of having order-->
       <h3>Programming Languages</h3>
-      <p><small>Order from most to least familiar</small></p>
-      <ol>
+      <ul>
         <li>Python</li>
         <li>Java</li>
         <li>Arduino C++</li>
         <li>Linux(Basically it's own Language)</li>
-      </ol>
+      </ul>
     </div>
     <div>
       <h4>Certifications</h4>
@@ -155,48 +159,89 @@
 
   </main>
 
+  <!-- Start of contact section -->
   <footer>
-    <section>
-      <h2>Contact me here!</h2>
-      <form action="#" method="get" class="contact-form">
-        <div class="contact-form">
-          <label for="name"> Name: </label>
-          <input title="Please enter your name here" type="text" name="name" id="name" placeholder="John Doe" required>
-        </div>
-        <div>
-          <Label for="email">Email:</Label>
-          <input title="Email Address" type="email" name="email" id="email" placeholder="123abc@gmail.com" required>
-        </div>
-        <div>
-          <label for="org">Organization:</label>
-          <input title="organizationn name" type="text" name="Orangization" id="org" placeholder="Nvidia Inc." required>
-        </div>
-        <div>
-          <label for="org">Phone #:</label>
-          <input title="Phone Number" type="text" name="phone" id="phone" placeholder="(123)456-7890" required>
-        </div>
-        <div>
-          <select name="Funny" id="the-funny">
-            <option value="">-- Please select the funny thing -- </option>
-            <option value="test">This is the funny option</option>
-            <option value="test">Monkeys cooking a cake</option>
-            <option value="test">My love life</option>
-          </select>
-        </div>
-        <div>
-          <label for="Comments"> Comment Box </label><br>
-          <textarea name="Comments" id="Comments" cols="20" rows="10"
-            placeholder="Additional Comments or Concerns here!"></textarea>
-        </div>
-        <!--      <legend>Press the correct button</legend>
-        <input type="radio" id="rice" name="funnybutton" value="not funny" > not funny</input><br>
-        <input type="radio" id="rice" name="funnybutton" value="almost funny" >almost funny</input><br>
-        <input type="radio" id="rice" name="funnybutton" value="the funny" > not funny</input><br>
-  -->
-        <br>
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
-      </form>
+    <section class="contact">
+      <div class="form-container">
+        <!-- Title -->
+        <h2>Contact me here!</h2>
+        <form action="#" method="get" class="contact-form">
+          <div class="contact-form">
+            
+            <!-- input form for name -->
+            <div class="text-input-container">
+              <label for="name">Name:</label>
+              <input 
+                title="Please enter your name here" 
+                type="text" 
+                name="name" 
+                id="name" 
+                placeholder="John Doe"
+                required>
+            </div>
+            
+            
+            
+           <!-- input form for Email -->
+            <div class="text-input-container">
+              <Label for="email">Email:</Label>
+              <input 
+              title="Email Address" 
+              type="email" 
+              name="email" 
+              id="email" 
+              placeholder="123abc@gmail.com" 
+              required>
+            </div>
+            
+            
+            <!-- input for Orangization -->
+            <div class="text-input-container">
+              <label for="org">Organization:</label>
+              <input 
+              title="organizationn name" 
+              type="text" 
+              name="Orangization" 
+              id="org" 
+              placeholder="Nvidia Inc."
+              >
+            </div>
+             <!-- input for phone number -->
+            <div class="text-input-container">
+              <label for="phone">Phone #:</label>
+              <input 
+              title="Phone Number" 
+              type="text" 
+              name="phone" 
+              id="phone" 
+              placeholder="(123)456-7890" 
+               required>
+            </div>
+            
+            
+            
+            <div class="select-container">
+             <label for="reason">Reason for Contact:</label>
+              <select name="reason" id="reason-selector">           
+                <option value="">-- Please select the Subject -- </option>
+                <option value="test">Question</option>
+                <option value="test">Collaboration</option>
+                <option value="test">Reference</option>
+                <option value="test">Feedback</option>
+              </select>
+            </div>
+            <div class="text-input-container">
+              <label for="Comments"> Comment Box </label><br>
+              <textarea name="Comments" id="Comments" cols="20" rows="10"
+                placeholder="Additional Comments or Concerns here!"></textarea>
+            </div>
+            <br>
+            <div class="button-container">
+            <button reset">Reset</button>
+            <button type="submit">Submit</button>
+          </div>        
+        </form>
+      </div>
     </section>
     <section>
       <h3>Links!</h3>
