@@ -7,72 +7,83 @@ div{
   display: block;
   unicode-bidi: isolate;
 }
-
+/* setting up the text for the webpage */
 body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 20px;
+    text-shadow: black 2px 0 3px;
+    font-size: 16px;
     line-height: 2;
     margin: 2rem;
     padding: 3rem;
-    background-color: rgb(7, 65, 127);
+    /* background-color: rgb(7, 65, 127); */
+    background: #3716A4;
+    background: -moz-linear-gradient(top, #3716A4 0%, #309EEC 27%, #501975 100%);
+    background: -webkit-linear-gradient(top, #3716A4 0%, #309EEC 27%, #501975 100%);
+    background: linear-gradient(to bottom, #3716A4 0%, #309EEC 27%, #501975 100%);
     border: 2px solid gold;
 }
-
+/* My name */
 h1 {
-    font-size: 2em;
+    
+    font-size: 2.5em;
     text-align: center;
     text-shadow: rgb(225, 184, 20) 1px 0 5px;
+    /* transition: all 100s ease; */
 }
-
-h2 {
+/* Giving the titles and sections titles more of a pop */
+h2,h3,h4 {
+    margin-left: 0;   
+    width: 30%;
+    padding: .2em;
     color: gold;
-    filter: drop-shadow(10px 11px 1px #1a1a0a);
+    font-size: 2em;
+    text-shadow: rgb(225, 184, 20) 1px 5% 5px;
+    outline: auto;
+   
+   
 }
-
-
-h3 {
-    color:  gold;
-    filter: drop-shadow(10px 11px 1px #1a1a0a);
-    /* color: white; */
-}
-h4 {
-    color:  gold;
-    filter: drop-shadow(10px 11px 1px #1a1a0a);
-    /* color: white; */
+/* Makes the text it looked neat */
+p::first-letter,table::first-letter,li::first-letter{
+  font-size: 1.4em;
 }
 
 p, li, th, tr, footer {
     color: white;
+    outline: ;
+    
 }
 
 
-h1, h2, h3
+/* h1, h2, h3
 {
   padding-bottom: 1rem;
-}
+  margin: 10px;
+  
+} */
 
 p, li, table, form
 {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
+  margin: 10px;
+ 
 }
 
 table {
-  border-collapse: collapse;
+  border-collapse: collapse; /*Brings the table closer together*/
   border-top: 2px solid rgb(140 140 140);
   border-bottom: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 1px;
 }
 
 a
 {
   text-decoration: none; /* Removing default underline from links */
-  color: #55AACC; /* A slightly lighter shade for links for better distinction */
+  color: #357892; /* A slightly lighter shade for links for better distinction */
 }
 
 thead{
-  letter-spacing: 4px;
+  letter-spacing: 4px; /*Moves the headers to be more aligned with the column information*/
 }
 
 .software .container
@@ -85,38 +96,42 @@ thead{
 
 
 
-.image-container
+.image-container /* This centers my image*/
 {
-  align-self: flex-start; /* Positions itself to the start of y-axis. */
-  margin: 0 auto;
-  /* Makes the image shape square. */
-  width: 15rem;
-  height: 15rem;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 300px; */
+  height: 300px;
 }
 
+
+img:hover{
+  
+  transform: rotate(1turn);
+}
 img
 {
-  /* border: 2px dotted gold; */
-  display: block;
   position: relative;
-  left: px;
   /* Fits the image into the container div. */
-  width: 100%;
+  width: 300px;
   height: 100%;
-  margin: 0 auto;
-  border-radius: 50%; /* Rounds the image. */
-
-  object-fit: cover; /* Preserves the original aspect ratio. */
-  object-position: 100% 20%; /* Makes the face visible moving the image down. */
+  border-radius: 50%; 
+  object-fit: cover; /*Preserves the original aspect ratio.*/
+  object-position: 100% 10%; /*attemping to center my face*/
+  transition: transform 1s cubic-bezier(0.075, 0.22, 0.165, 1);
+ 
 }
+/* Funny spin */
+ /* transition:  3s cubic-bezier(0.19, 1, 0.22, 1); */
+
 
 .border-dotted
 {
-  border: 2px dotted #eaeaea;
+  border: 5px solid #eaeaea;
 }
 
-
+/* Ways to make the contact box look cool */
 form input,
 form textarea,
 form select
@@ -188,3 +203,84 @@ form button{
 {
   margin-right: 1rem;
 }
+
+
+/* Define the transition property */
+
+.transition {
+    transition: 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Apply the transition to specific elements */
+
+.element {
+    /* Define the initial state of the element */
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    /* Add the transition property to the element */
+    transition: all 0.3s ease;
+}
+
+/* Create a hover effect with the transition */
+
+.element:hover {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+
+
+@keyframes fly-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fly-in-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Apply the animation to all elements */
+main > *{
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+/* Apply the left fly-in animation to even-indexed elements */
+main > *:nth-child(2n) {
+    animation-name: fly-in-left;
+}
+
+/* Apply the right fly-in animation to odd-indexed elements */
+main > *:nth-child(odd) {
+    animation-name: fly-in-right;
+}
+
+
+form > * {
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+/* Apply fly-in-left animation to elements within form */
+form > div:nth-child(even) {
+    animation-name: fly-in-left;
+}
+
+/* Apply fly-in-right animation to elements within form */
+form > div:nth-child(odd) {
+    animation-name: fly-in-right;
+}
+

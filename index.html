@@ -15,15 +15,16 @@
   Section off each point  -->
   <header>
     <div class="image-container">
-      <img class="border-dotted" src="./Images/Phillip.PNG" width="120" alt="Phillip's Protrait">
+      <img class="border-dotted" src="./Images/Phillip.PNG" height=""width="190" alt="Phillip's Protrait">
     </div>
-    <h1>Phillip Varveris</h1>
-    <hr>
-    <p> Email: <a href="Phillipvarveris@gmail.com"> Phillipvarveris@gmail.com</a> </p>
-    <p> Phone: (631)835-8291</p>
+
   </header>
 
   <main>
+     <h1>Phillip Varveris</h1>
+    <hr>
+    <p> Email: <a href="Phillipvarveris@gmail.com"> Phillipvarveris@gmail.com</a> </p>
+    <p> Phone: (631)835-8291</p>
     <!--Startin Summary-->
     <section>
       <h2>Summary</h2>
@@ -153,7 +154,7 @@
     <h2>Coding Project</h2>
     <h3>Foresight</h3>
     <p>A device that was akin to a backup camera. Fully Wireless using Flask and a Raspberry Pi Cameras. It live
-      streamed a footage from about 200Ft. This device was meant to be a competitive project against existing wireless
+      streamed a footage from about 500 feet. This device was meant to be a competitive project against existing wireless
       cameras that sell a standalone monitor for the camera. Our product used your cell phone instead and was cheaper.
     </p>
 
@@ -177,6 +178,7 @@
                 name="name" 
                 id="name" 
                 placeholder="John Doe"
+                autocomplete="given-name"
                 required>
             </div>
             
@@ -191,6 +193,7 @@
               name="email" 
               id="email" 
               placeholder="123abc@gmail.com" 
+              autocomplete="off"
               required>
             </div>
             
@@ -203,6 +206,7 @@
               type="text" 
               name="Orangization" 
               id="org" 
+              autocomplete="off"
               placeholder="Nvidia Inc."
               >
             </div>
@@ -215,13 +219,14 @@
               name="phone" 
               id="phone" 
               placeholder="(123)456-7890" 
+              autocomplete="Phone"
                required>
             </div>
             
             
             
             <div class="select-container">
-             <label for="reason">Reason for Contact:</label>
+             <label for="reason-selector">Reason for Contact:</label>
               <select name="reason" id="reason-selector">           
                 <option value="">-- Please select the Subject -- </option>
                 <option value="test">Question</option>
@@ -249,8 +254,11 @@
       <b><i><a href="https://github.com/PhillJr"> Github </a></i></b>
       <br>
       <b><i><a href="https://www.linkedin.com/in/phillip-varveris-836770120/"> linkedin </a></i></b>
-      <p><small>Side note I really need to work on my linkedIn Profile...</small></p>
+
     </section>
+
+
+
   </footer>
 
 </body>
